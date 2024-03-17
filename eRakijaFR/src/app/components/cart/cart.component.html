@@ -1,0 +1,64 @@
+<div *ngIf="products.length != 0">
+    <div class="container">
+        <div class="card-table">
+            <div class="cart-product">
+                <table class="table table-responsive">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Ime proizvoda</th>
+                            <th>Slika Proizvoda</th>
+                            <th>Cena</th>
+                            <th>Kolicina</th>
+                            <th>Ukupno</th>
+                            <th>Akcija</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let item of products; let i = index">
+                            <td>{{i+1}}</td>
+                            <td>{{item.naziv}}</td>
+                            <td><img src="{{item.slika}}" class="img-fluid" style="height: 3rem;"></td>
+                            <td style="width: 13%;">{{item.cena}}</td>
+                            <td class="align-middle">
+                                <div class="d-flex align-items-center">
+                                  <i class="fa fa-minus-circle text-warning me-2" style="cursor: pointer; font-size: 1.6em;" (click)="smanjiKolicinu(item)"></i>
+                                  <strong style="font-size: 1.4em;">{{item.kolicina}}</strong>
+                                  <i class="fa fa-plus-circle text-warning mx-2" style="cursor: pointer; font-size: 1.6em;" (click)="povecajKolicinu(item)"></i>
+                                </div>
+                              </td>
+                            <td style="width: 13%;">{{item.cena * item.kolicina}}</td>
+                            <td>
+                                <button (click)="removeItem(item)" class="btn btn-danger">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"></td>
+                            <td><button (click)="emptyCart()" class="btn btn-danger">Empty Cart</button></td>
+                            <td><button routerLink="/shop" class="btn btn-primary">Shop More</button></td>
+                            <td><button class="btn btn-success">Checkout</button></td>
+                            <td style="width: 13%;">Ukupna Cena: {{this.totalPrice}}RSD</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="products.length == 0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">My Cart!</h5>
+        </div>
+        <div class="center text-center">
+            <img src="../../../assets/cartEmpty.png" class="img-fluid">
+            <h4 class="fw-bold">Your cart is empty!</h4>
+            <h5>Add item to it now</h5>
+            <button class="btn btn-dark" routerLink="/shop">Shop now</button>
+        </div>
+    </div>
+</div>

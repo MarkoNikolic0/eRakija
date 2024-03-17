@@ -1,0 +1,40 @@
+<div class="row col-12 bg-beige" *ngIf="filterCategory && Proizvodi">
+    <div class="col-12 row">
+        <div class="col-sm-12 col-md-3 col-lg-2 row p-3" style="height: 5rem;">
+            <div class="">
+                <p>Sortiraj po ceni: </p>
+            </div>
+            <div class="btn-group mb-lg-2" role="group" aria-label="Basic radio toggle button group">
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
+                <label class="btn btn-outline-dark" for="btnradio1" (click)="sortirajRastuce()">Rastuce</label>
+
+                <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                <label class="btn btn-outline-dark" for="btnradio2" (click)="sortirajOpadajuce()">Opadajuce</label>
+            </div>
+            <div class="dropdown col-12">
+                <button class="btn btn-dark dropdown-toggle" type="button" id="Filter" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Filtriraj proizvode po tipu
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                    <li><a class="dropdown-item" id="Svi" (click)="prikaziProizvode()">Svi Proizvodi</a></li>
+                    <li><a class="dropdown-item" id="Rakija" (click)="filter('Rakija')">Rakije</a></li>
+                    <li><a class="dropdown-item" id="Liker" (click)="filter('Liker')">Likeri</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-8 col-md-6 col-sm-9 text-center mt-5">
+            <h2 class="font-serif" style="font-size: 3rem;">Proizvodi</h2>
+        </div>
+        <div class="col-lg-2 col-md-3 col-sm-12 d-flex flex-wrap p-2">
+            <app-edit-item-dialog></app-edit-item-dialog>
+        </div>
+    </div>
+    <div class="row col-sm-12 col-md-12 bg-beige">
+        <div class="row col-lg-12">
+            <div class="col-sm-12 col-md-6 col-lg-3 p-3" *ngFor="let proizvod of filterCategory">
+                <app-proizvod [proizvod]="proizvod"></app-proizvod>
+            </div>
+        </div>
+    </div>
+</div>

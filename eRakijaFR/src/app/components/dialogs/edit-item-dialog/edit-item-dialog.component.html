@@ -1,0 +1,86 @@
+<div>
+    <button type="button" class="btn btn-success" (click)="openModal(AddTemplate)">Add Item</button>
+    <button type="button" class="btn btn-warning" (click)="openModal(editTemplate)">Edit item</button>
+    <button type="button" class="btn btn-danger" (click)="openModal(deleteTemplate)">Delete item</button>
+</div>
+
+<ng-template #AddTemplate>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Add Item</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Naziv" name="naziv" #naziv aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Cena" name="cena" #cena aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Slika" name="slika" #slika aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Opis" name="opis" #opis aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Kolicina" name="kolicina" #kolicina required aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Tip Proizvoda Id" #tipId name="tipId" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <button type="submit" class="btn btn-success" (click)="addProizvod(naziv.value, cena.value, slika.value, opis.value, kolicina.value, tipId.value);closeModal()">Add</button>
+        </form>
+    </div>
+</ng-template>
+
+<ng-template #editTemplate>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Edit Item</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Naziv" name="naziv" #naziv aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Cena" name="cena" #cena aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Slika" name="slika" #slika aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Opis" name="opis" #opis aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Kolicina" name="kolicina" #kolicina required aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Proizvod Id" #proizvodId name="tipId" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <button type="submit" class="btn btn-success" (click)="EditProizvod(naziv.value, cena.value, slika.value, opis.value, kolicina.value, proizvodId.value);closeModal()">Edit</button>
+        </form>
+    </div>
+</ng-template>
+
+<ng-template #deleteTemplate>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Delete item</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Proizvod Id" #proizvodId name="tipId" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <button type="submit" class="btn btn-success" (click)="deleteProizvod(proizvodId.value);closeModal()">Delete</button>
+        </form>
+    </div>
+</ng-template>
