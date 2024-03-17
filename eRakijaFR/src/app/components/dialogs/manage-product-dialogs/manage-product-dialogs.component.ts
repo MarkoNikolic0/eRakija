@@ -6,11 +6,11 @@ import { TipProizvoda } from 'src/app/models/TipProizvoda';
 import { ProizvodService } from 'src/app/services/proizvod.service';
 
 @Component({
-  selector: 'app-edit-item-dialog',
-  templateUrl: './edit-item-dialog.component.html',
-  styleUrls: ['./edit-item-dialog.component.scss']
+  selector: 'app-manage-product-dialogs',
+  templateUrl: './manage-product-dialogs.component.html',
+  styleUrls: ['./manage-product-dialogs.component.scss']
 })
-export class EditItemDialogComponent {
+export class ManageProductDialogsComponent {
 
   modalRef?: BsModalRef;
 

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Proizvod } from 'src/app/models/Proizvod';
 import { ProizvodService } from 'src/app/services/proizvod.service';
-import { EditItemDialogComponent } from '../dialogs/edit-item-dialog/edit-item-dialog.component';
+import { ManageProductDialogsComponent } from '../dialogs/manage-product-dialogs/manage-product-dialogs.component';
 
 @Component({
   selector: 'app-shop',

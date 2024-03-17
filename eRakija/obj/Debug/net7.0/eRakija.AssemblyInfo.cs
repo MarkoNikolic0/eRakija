@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("eRakija")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f01dfcc9cfe6a9afead1413dd34c3630bab9e3cb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e1ed31aa8b3a54342187f807600f7c2f125710ed")]
 [assembly: System.Reflection.AssemblyProductAttribute("eRakija")]
 [assembly: System.Reflection.AssemblyTitleAttribute("eRakija")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

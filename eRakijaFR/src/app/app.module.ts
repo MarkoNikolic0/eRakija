@@ -19,9 +19,11 @@ import { SignupComponent } from './user/signup/signup.component';
 import { LoginComponent } from './user/login/login.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { EditItemDialogComponent } from './components/dialogs/edit-item-dialog/edit-item-dialog.component';
+import { ManageProductDialogsComponent } from './components/dialogs/manage-product-dialogs/manage-product-dialogs.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { FormsModule } from '@angular/forms';
+import { ManageProductsComponent } from './components/manage-products/manage-products.component';
+import { ManageProductTypeDialogsComponent } from './components/dialogs/manage-product-type-dialogs/manage-product-type-dialogs.component';
 
 
 
@@ -38,7 +40,9 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     CartComponent,
     ContactComponent,
-    EditItemDialogComponent
+    ManageProductDialogsComponent,
+    ManageProductsComponent,
+    ManageProductTypeDialogsComponent
   ],
   imports: [
     BrowserModule,

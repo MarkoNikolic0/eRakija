@@ -1,0 +1,59 @@
+<div>
+    <button type="button" class="btn btn-success" (click)="openModal(AddTemplate)">Add Item Type</button>
+    <button type="button" class="btn btn-warning" (click)="openModal(editTemplate)">Edit item Type</button>
+    <button type="button" class="btn btn-danger" (click)="openModal(deleteTemplate)">Delete item Type</button>
+</div>
+
+<ng-template #AddTemplate>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Add Item Type</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Naziv" name="naziv" #naziv aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <button type="submit" class="btn btn-success" (click)="addProductType(naziv.value);closeModal()">Add</button>
+        </form>
+    </div>
+</ng-template>
+
+<ng-template #editTemplate>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Edit Item Type</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Naziv" name="naziv" #naziv required aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Tip Id" #tipId name="tipId" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <button type="submit" class="btn btn-success" (click)="EditProductType(naziv.value, tipId.value);closeModal()">Edit</button>
+        </form>
+    </div>
+</ng-template>
+
+<ng-template #deleteTemplate>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Delete item</h4>
+        <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+            <span aria-hidden="true" class="visually-hidden">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <form>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Tip Id" #tipId name="tipId" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
+            <button type="submit" class="btn btn-success" (click)="deleteProduct(tipId.value);closeModal()">Delete</button>
+        </form>
+    </div>
+</ng-template>
