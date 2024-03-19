@@ -22,7 +22,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ManageProductDialogsComponent } from './components/dialogs/manage-product-dialogs/manage-product-dialogs.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import { FormsModule } from '@angular/forms';
-import { ManageProductsComponent } from './components/manage-products/manage-products.component';
+import { CrudComponent } from './components/crud/crud.component';
 import { ManageProductTypeDialogsComponent } from './components/dialogs/manage-product-type-dialogs/manage-product-type-dialogs.component';
 
 
@@ -41,7 +41,7 @@ import { ManageProductTypeDialogsComponent } from './components/dialogs/manage-p
     CartComponent,
     ContactComponent,
     ManageProductDialogsComponent,
-    ManageProductsComponent,
+    CrudComponent,
     ManageProductTypeDialogsComponent
   ],
   imports: [

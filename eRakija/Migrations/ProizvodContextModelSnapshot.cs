@@ -17,57 +17,12 @@ namespace eRakija.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.2")
+                .HasAnnotation("ProductVersion", "7.0.2")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Models.Korisnik", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Ime")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Prezime")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("RefreshToken")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("RefreshTokenExpiryDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Telefon")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Tip")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Token")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Korisnici");
-                });
-
-            modelBuilder.Entity("Models.Proizvod", b =>
+            modelBuilder.Entity("eRakija.Models.Proizvod", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -101,7 +56,7 @@ namespace eRakija.Migrations
                     b.ToTable("Proizvodi");
                 });
 
-            modelBuilder.Entity("Models.TipProizvoda", b =>
+            modelBuilder.Entity("eRakija.Models.TipProizvoda", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -118,16 +73,16 @@ namespace eRakija.Migrations
                     b.ToTable("TipoviProizvoda");
                 });
 
-            modelBuilder.Entity("Models.Proizvod", b =>
+            modelBuilder.Entity("eRakija.Models.Proizvod", b =>
                 {
-                    b.HasOne("Models.TipProizvoda", "tipProizvoda")
+                    b.HasOne("eRakija.Models.TipProizvoda", "tipProizvoda")
                         .WithMany("proizvod")
                         .HasForeignKey("tipProizvodaId");
 
                     b.Navigation("tipProizvoda");
                 });
 
-            modelBuilder.Entity("Models.TipProizvoda", b =>
+            modelBuilder.Entity("eRakija.Models.TipProizvoda", b =>
                 {
                     b.Navigation("proizvod");
                 });

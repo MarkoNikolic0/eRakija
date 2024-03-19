@@ -100,7 +100,7 @@ namespace eRakijaTest
             }
             else
             {
-                Console.WriteLine($"Neuspešno dodavanje knjige. Rezultat: {result}");
+                Console.WriteLine($"Neuspešno dodavanje tipa proizvoda. Rezultat: {result}");
                 Assert.Fail();
             }
         }
@@ -171,7 +171,7 @@ namespace eRakijaTest
             {
                 Assert.NotNull(okResult.Value);
                 var tp = okResult.Value as TipProizvoda;
-                Console.WriteLine($"Izmenjena knjiga: {tp.Naziv}");
+                Console.WriteLine($"Izmenjeni tip proizvoda: {tp.Naziv}");
                 var dbTipovi = await Context.TipoviProizvoda.FindAsync(tp.Id);
                 Assert.NotNull(dbTipovi);
             }

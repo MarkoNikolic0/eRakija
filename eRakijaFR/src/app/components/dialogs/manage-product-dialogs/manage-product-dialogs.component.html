@@ -1,4 +1,4 @@
-<div>
+<div class="row">
     <button type="button" class="btn btn-success" (click)="openModal(AddTemplate)">Add Item</button>
     <button type="button" class="btn btn-warning" (click)="openModal(editTemplate)">Edit item</button>
     <button type="button" class="btn btn-danger" (click)="openModal(deleteTemplate)">Delete item</button>
@@ -8,7 +8,7 @@
     <div class="modal-header">
         <h4 class="modal-title pull-left">Add Item</h4>
         <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
-            <span aria-hidden="true" class="visually-hidden">&times;</span>
+            <span aria-hidden="true" class="visually-hidden">&times;Add Item</span>
         </button>
     </div>
     <div class="modal-body">

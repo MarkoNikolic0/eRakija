@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KMEAdhTD4puMJRQmwtInDkCWdAAuNgLNtnG2nXv9Ilo/eDVsRHzFChxld8r1P31Ow5IXXrwWV8BuqB3VN8T+8Q==",
+  "dgSpecHash": "pukjsVp0PqVZil0vzVrc1XzWm72/O4GfTQx1AuJmckvIz/5zF3Xn2FurGvfG9jCRRQpYsM/NJNTjce3TwM3H9A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProjekat\\eRakijaTest\\eRakijaTest.csproj",
+  "projectFilePath": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProject\\eRakija\\eRakijaTest\\eRakijaTest.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Gigabyte\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Gigabyte\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

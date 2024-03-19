@@ -4,6 +4,8 @@ import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
 import { Proizvod } from 'src/app/models/Proizvod';
 import { ProizvodService } from 'src/app/services/proizvod.service';
 import { ManageProductDialogsComponent } from '../dialogs/manage-product-dialogs/manage-product-dialogs.component';
+import { TipProizvodaService } from 'src/app/services/tipProizvoda.service';
+import { TipProizvoda } from 'src/app/models/TipProizvoda';
 
 @Component({
   selector: 'app-shop',
@@ -15,8 +17,9 @@ export class ShopComponent implements OnInit {
   public filterCategory: any
   public Proizvodi: Proizvod[] = []
   public SviProizvodi: Proizvod[] = []
+  public SviTipoviProizvoda: TipProizvoda[] = []
 
-  constructor(private proizvodService: ProizvodService, private router: Router) { }
+  constructor(private proizvodService: ProizvodService, private router: Router, private tipProizvodaService: TipProizvodaService) { }
 
   ngOnInit(): void {
     this.proizvodService.prikaziProizvode().subscribe(p => {
@@ -24,6 +27,11 @@ export class ShopComponent implements OnInit {
       this.filterCategory = p
       this.SviProizvodi = p
       console.log(this.Proizvodi)
+    })
+
+    this.tipProizvodaService.prikaziTipoveProizvoda().subscribe(tp => {
+      this.SviTipoviProizvoda = tp
+      console.log(this.SviTipoviProizvoda)
     })
   }
 

@@ -273,7 +273,7 @@ namespace eRakijaTest
             var result = await ProizvodController.DodajProizvod(proizvod, tipId);
             if (result is NotFoundObjectResult)
             {
-                Assert.That(result is NotFoundObjectResult, "I treba da izbaci NotFound u ovom testu jer user ili knjizara ne postoji");
+                Assert.That(result is NotFoundObjectResult, "I treba da izbaci NotFound u ovom testu jer tip proizvoda ne postoji");
                 Console.WriteLine($"Vratio je NotFound");
                 Assert.Pass();
             }
@@ -369,7 +369,7 @@ namespace eRakijaTest
             }
             else
             {
-                Console.WriteLine($"Neuspešno menjanje knjige. Rezultat: {result}");
+                Console.WriteLine($"Neuspešno menjanje proizvoda. Rezultat: {result}");
                 Assert.Fail("Nije vratio NotFound");
             }
         }

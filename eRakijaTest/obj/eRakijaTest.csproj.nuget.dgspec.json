@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gigabyte\\Desktop\\eRakijaProjekat\\eRakijaTest\\eRakijaTest.csproj": {}
+    "C:\\Users\\Gigabyte\\Desktop\\eRakijaProject\\eRakija\\eRakijaTest\\eRakijaTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gigabyte\\Desktop\\eRakijaProjekat\\eRakijaTest\\eRakijaTest.csproj": {
+    "C:\\Users\\Gigabyte\\Desktop\\eRakijaProject\\eRakija\\eRakijaTest\\eRakijaTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProjekat\\eRakijaTest\\eRakijaTest.csproj",
+        "projectUniqueName": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProject\\eRakija\\eRakijaTest\\eRakijaTest.csproj",
         "projectName": "eRakijaTest",
-        "projectPath": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProjekat\\eRakijaTest\\eRakijaTest.csproj",
+        "projectPath": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProject\\eRakija\\eRakijaTest\\eRakijaTest.csproj",
         "packagesPath": "C:\\Users\\Gigabyte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProjekat\\eRakijaTest\\obj\\",
+        "outputPath": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProject\\eRakija\\eRakijaTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gigabyte\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Gigabyte\\Desktop\\eRakijaProjekat\\eRakija\\eRakija.csproj": {
-                "projectPath": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProjekat\\eRakija\\eRakija.csproj"
+              "C:\\Users\\Gigabyte\\Desktop\\eRakijaProject\\eRakija\\eRakija\\eRakija.csproj": {
+                "projectPath": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProject\\eRakija\\eRakija\\eRakija.csproj"
               }
             }
           }
@@ -85,14 +85,14 @@
         }
       }
     },
-    "C:\\Users\\Gigabyte\\Desktop\\eRakijaProjekat\\eRakija\\eRakija.csproj": {
+    "C:\\Users\\Gigabyte\\Desktop\\eRakijaProject\\eRakija\\eRakija\\eRakija.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProjekat\\eRakija\\eRakija.csproj",
+        "projectUniqueName": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProject\\eRakija\\eRakija\\eRakija.csproj",
         "projectName": "eRakija",
-        "projectPath": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProjekat\\eRakija\\eRakija.csproj",
+        "projectPath": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProject\\eRakija\\eRakija\\eRakija.csproj",
         "packagesPath": "C:\\Users\\Gigabyte\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProjekat\\eRakija\\obj\\",
+        "outputPath": "C:\\Users\\Gigabyte\\Desktop\\eRakijaProject\\eRakija\\eRakija\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Gigabyte\\AppData\\Roaming\\NuGet\\NuGet.Config",

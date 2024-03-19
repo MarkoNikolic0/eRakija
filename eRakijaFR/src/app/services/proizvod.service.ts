@@ -14,10 +14,6 @@ export class ProizvodService {
 
   constructor(private http: HttpClient) { }
 
-  prikaziSamoProizvode() {
-    return this.http.get<Proizvod[]>(`${url}/Proizvod/PrikaziSamoProizvode`)
-  }
-
   prikaziProizvode() {
     return this.http.get<Proizvod[]>(`${url}/Proizvod/PrikaziProizvode`)
   }

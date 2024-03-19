@@ -2,7 +2,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, catchError } from 'rxjs';
 import { ProizvodPost } from '../models/Proizvod';
-import { TipProizvodaPost } from '../models/TipProizvoda';
+import { TipProizvoda, TipProizvodaPost } from '../models/TipProizvoda';
 import { url } from 'environments/environments.dev';
 
 @Injectable({
@@ -14,6 +14,10 @@ export class TipProizvodaService {
   public proizvodiRes$ = this.proizvodSubject.asObservable();
 
   constructor(private http: HttpClient) { }
+
+  prikaziTipoveProizvoda() {
+    return this.http.get<TipProizvoda[]>(`${url}/TipProizvoda/PrikaziTipoveProizvoda`)
+  }
 
   dodajTipProizvoda(tp: TipProizvodaPost): Observable<any> {
     console.log(tp.naziv)
